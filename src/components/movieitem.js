@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+
 // some comments
 class MovieItem extends Component {
     render() {
@@ -16,7 +18,9 @@ class MovieItem extends Component {
                             </footer>
                         </blockquote>
                     </Card.Body>
+                    <Link to={"edit/"+this.props.movie._id} className="btn btn-primary"></Link>
                 </Card>
+
             </div>
         );
     }

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import Edit from './components/edit'
 
 import {
   BrowserRouter as Router,
@@ -28,6 +29,7 @@ class App extends Component {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/read">Read</Nav.Link>
               <Nav.Link href="/create">Create</Nav.Link>
+              <Nav.Link href="/edit">Edit</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
@@ -35,6 +37,7 @@ class App extends Component {
           <Route path="/" exact><Content /></Route>
           <Route path="/create"><Create></Create></Route>
           <Route path="/read"><Read></Read></Route>
+          <Route path="/edit/:id"><Edit></Edit></Route>
         </Switch>
       </div>
       </Router>
